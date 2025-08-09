@@ -69,7 +69,7 @@ def run_once():
             endpoint, params, data = fetch_open_meteo(40.7128, -74.0060, "America/New_York")
             upsert_payload(cs, "open-meteo", endpoint, params, data)
             con.commit()
-            print("✅ Ingested 1 payload into WEATHERLAB.RAW.API_INGEST")
+            print("Ingested 1 payload into WEATHERLAB.RAW.API_INGEST")
         finally:
             cs.close()
 
